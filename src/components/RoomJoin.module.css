@@ -1,0 +1,30 @@
+.input__container {
+  display: inline-block;
+  margin-top: 115px;
+  width: 550px;
+  height: 500px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 10px 10px 10px;
+}
+
+.input__data {
+  margin-top: 180px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 238px;
+  margin-bottom: 5px;
+}
+
+.enter__chat {
+  width: 200px;
+  margin-top: 15px;
+  height: 50px;
+  border: none;
+  background-color: #3b5998;
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}

@@ -1,0 +1,48 @@
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  row-gap: 1px;
+  margin-top: 50px;
+}
+
+.input__name__modal {
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 238px;
+  margin-bottom: 5px;
+}
+
+.input__email__modal {
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 238px;
+  margin-bottom: 5px;
+}
+
+.input__password__modal {
+  border: 1px solid gray;
+  border-radius: 2px;
+  width: 238px;
+  margin-bottom: 5px;
+}
+
+.button__signup {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  background-color: #162ada;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.span__signup {
+  margin-top: 20px;
+  font-size: 17px;
+  text-transform: uppercase;
+}
