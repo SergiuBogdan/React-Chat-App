@@ -40,8 +40,8 @@ const Chat = ({ room, children, isAuth, setIsAuth, setIsInChat }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     if (newMessage === "") return;
     await addDoc(messagesRef, {
@@ -54,11 +54,11 @@ const Chat = ({ room, children, isAuth, setIsAuth, setIsInChat }) => {
     setNewMessage("");
   };
 
+  const date = new Date();
+
   const newMessageHandler = (e) => {
     setNewMessage(e.target.value);
   };
-
-  const date = new Date();
 
   return (
     <div>

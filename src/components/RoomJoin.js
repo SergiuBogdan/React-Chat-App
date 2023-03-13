@@ -5,10 +5,11 @@ import AppWrapper from "./AppWrapper";
 import SignInWithGoogle from "./SignInWithGoogle.js";
 import SignInWithFacebook from "./SignInWithFacebook.js";
 import SignInWithEmail from "./SignInWithEmail.js";
-import classes from "./RoomJoin.module.css";
-
+import { debounce } from "lodash";
 import Cookies from "universal-cookie";
+
 import "../App.css";
+import classes from "./RoomJoin.module.css";
 
 const cookies = new Cookies();
 
@@ -35,19 +36,18 @@ const RoomJoin = () => {
     );
   }
 
-  const inputValueHandler = (e) => {
-    setRoom(e.target.value);
-  };
-
   const buttonHandler = () => {
     setIsInChat(true);
   };
+
+  const updateQuerry = (e) => setRoom(e?.target?.value);
+  const debounceQuerry = debounce(updateQuerry, 250);
 
   return (
     <AppWrapper isAuth={isAuth} setIsAuth={setIsAuth} setIsInChat={setIsInChat}>
       {!isInChat ? (
         <div className={classes.input__container}>
-          <form onChange={inputValueHandler}>
+          <form onChange={debounceQuerry}>
             <label> Room name: &nbsp; </label>
             <input className={classes.input__data} />
             <button className={classes.enter__chat} onClick={buttonHandler}>
