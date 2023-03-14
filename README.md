@@ -1,5 +1,8 @@
 # React-Chat-App
 
+A chat application made in React and using various technologies.
+
+
 # Getting Started with Create React App
 
 To install npm packages, please use:
